@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%for food in food%}
+ <a href="javascript:window.open('{{url_for('menu', type = food.food_name)}}', 'width=20,height=50', left=400, top =10);">{{food.food_name}}</a>
+{{food.food_price}}
+
+<img src="/static/{{food.path}}" width="100" height="100" >
+{%endfor%}
+</body>
+</html>
